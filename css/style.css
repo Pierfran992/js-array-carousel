@@ -32,3 +32,7 @@ header img {
 }
 
 /* main rules */
+
+main {
+    margin-top: 100px;
+}
