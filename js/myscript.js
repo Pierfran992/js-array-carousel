@@ -35,7 +35,7 @@ msPrev.addEventListener('click',
 
     function() {
 
-        if (msActive = imgSlider.length) {
+        if (msActive > imgSlider.length -5) {
             // togli la classe ms_active all'immagine attuale
             imgSlider[msActive].classList.remove('ms_active');
 
