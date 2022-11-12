@@ -1,3 +1,16 @@
+// creo l'array contenente le immagini
+const msImgContainer = ["img/01.webp","img/02.webp","img/03.webp","img/04.webp","img/05.webp",];
+
+console.log(msImgContainer);
+
+// creo il ciclo for per inserire le immagini nello slider
+
+
+
+
+
+
+
 // creo la costante per richimare le immagini dello slider
 const imgSlider = document.getElementsByClassName("ms_img");
 console.log(imgSlider);
@@ -35,7 +48,7 @@ msPrev.addEventListener('click',
 
     function() {
 
-        if (msActive > imgSlider.length -5) {
+        if (msActive > imgSlider.length - imgSlider.length) {
             // togli la classe ms_active all'immagine attuale
             imgSlider[msActive].classList.remove('ms_active');
 
