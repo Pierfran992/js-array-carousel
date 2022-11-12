@@ -1,18 +1,39 @@
 // creo l'array contenente le immagini
-const msImgContainer = ["img/01.webp","img/02.webp","img/03.webp","img/04.webp","img/05.webp",];
+const msImgSlider = ["img/01.webp","img/02.webp","img/03.webp","img/04.webp","img/05.webp",];
 
-console.log(msImgContainer);
+console.log(msImgSlider);
+
+const msImgContainer = document.getElementById("imgContainer");
 
 // creo il ciclo for per inserire le immagini nello slider
+for (let i = 0; i < msImgSlider.length;  i++) {
+    // creo il contenitore della singola immagine
+    let imgDiv = document.createElement("div");
+    // creo le condizioni per insirerire le classi nel contenitore
+    if (i == 0) {
+        imgDiv.className = "ms_img ms_active";
+    } else {
+        imgDiv.className = "ms_img";
+    }
 
+    // imgDiv.className = i == 0? "ms_img ms_active": "ms_img"; IF INLINE POSSO USARLO? 
 
+    // creo il tag img
+    let img = document.createElement("img");
 
+    // inserisco src al tag img
+    img.src = msImgSlider[i];
 
+    // compongo l'elemento dello slider
+    imgDiv.appendChild(img);
 
+    msImgContainer.appendChild(imgDiv);
 
+}
 
 // creo la costante per richimare le immagini dello slider
 const imgSlider = document.getElementsByClassName("ms_img");
+
 console.log(imgSlider);
 
 // creo la costante che mi permetterà di switchare tra le varie immagini la classe ms_active
